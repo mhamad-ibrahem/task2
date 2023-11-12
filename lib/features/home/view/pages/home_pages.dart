@@ -17,14 +17,14 @@ class HomePage extends StatelessWidget {
       body: GetBuilder<HomeController>(
         builder: (controller) => controller.statusRequest ==
                 StatusRequest.loading
-            ? LoadingWidget()
+            ? const LoadingWidget()
             : controller.statusRequest == StatusRequest.failure
                 ? RetryButton(onTap: () {
                     controller.getData();
                   })
                 : Column(
                     children: [
-                      HomeTopContainer(),
+                      const HomeTopContainer(),
                       Expanded(
                         child: SingleChildScrollView(
                           padding: const EdgeInsets.symmetric(horizontal: 20),
@@ -32,7 +32,7 @@ class HomePage extends StatelessWidget {
                             children: [
                               ListView.builder(
                                 shrinkWrap: true,
-                                physics: NeverScrollableScrollPhysics(),
+                                physics: const NeverScrollableScrollPhysics(),
                                 itemCount: controller.hotelsList.length,
                                 itemBuilder: (context, index) {
                                   return HomeHotelCard(

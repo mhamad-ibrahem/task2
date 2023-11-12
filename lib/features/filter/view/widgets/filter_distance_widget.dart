@@ -34,7 +34,6 @@ class FilterDistanceWidget extends StatelessWidget {
                 Text(
                   'Location',
                   style: Theme.of(context).textTheme.displayMedium!.copyWith(
-                        // color: AppColors.deepGrey,
                         fontSize: 15,
                       ),
                 ),
